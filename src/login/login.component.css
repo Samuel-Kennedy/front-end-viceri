@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.tela-login {
+  height: 100vh;
+  background: linear-gradient(135deg, #1d3557, #5e60ce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-login {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.titulo-viceri {
+  color: #5e60ce;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.formulario h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #5e60ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f409c;
+}
+
+.cadastro {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #555;
+}
+
+.cadastro a {
+  color: #5e60ce;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cadastro a:hover {
+  text-decoration: underline;
+}
