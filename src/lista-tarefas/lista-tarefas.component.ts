@@ -24,7 +24,6 @@ export class ListaTarefasComponent implements OnInit {
       },
       error: (err) => {
         console.error('Erro ao carregar tarefas:', err);
-        // aqui pode redirecionar pra login, mostrar mensagem, etc.
       }
     });
   }
@@ -33,7 +32,6 @@ export class ListaTarefasComponent implements OnInit {
     const tarefa = this.tarefas.find(t => t.id === tarefaId);
     if (tarefa) {
       tarefa.concluida = true;
-      // ideal: chamar API para atualizar status da tarefa
     }
   }
 

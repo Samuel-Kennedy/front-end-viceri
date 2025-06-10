@@ -18,10 +18,7 @@
         <span class="col descricao">{{ tarefa.descricao }}</span>
         <span class="col prioridade">{{ tarefa.prioridade }}</span>
 
-        <button 
-          *ngIf="!tarefa.concluida" 
-          (click)="concluirTarefa(tarefa.id)"
-          class="acao btn-concluir">
+        <button *ngIf="!tarefa.concluida" (click)="concluirTarefa(tarefa.id)" class="acao btn-concluir">
           Concluir
         </button>
 

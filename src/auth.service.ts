@@ -13,7 +13,7 @@ interface UsuarioCadastro {
 })
 export class AuthService {
 
-  private readonly API_URL = 'http://localhost:3000/api'; // ajuste conforme sua API
+  private readonly API_URL = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
 

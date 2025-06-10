@@ -12,7 +12,7 @@ export class ListaTarefasService {
   constructor(private http: HttpClient) { }
 
   listarTarefas(): Observable<any> {
-    const token = localStorage.getItem('token'); // ou onde você salva o token
+    const token = localStorage.getItem('token');
 
     const headers = new HttpHeaders({
       Authorization: `Bearer ${token}`

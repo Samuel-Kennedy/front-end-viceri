@@ -1,27 +1,61 @@
-# FrontEndViceri
+# 📝 Desafio Frontend - Viceri (To-Do App)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Este projeto é uma aplicação **Angular** para consumir a API de tarefas (To-Do List) desenvolvida no backend. O objetivo é criar uma interface para cadastro, login e gerenciamento de tarefas pendentes do usuário.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologias Utilizadas
 
-## Code scaffolding
+- Angular 12+  
+- TypeScript  
+- CSS básico  
+- HttpClientModule (para comunicação com API RESTful)  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### ✅ Pré-requisitos
 
-## Build
+- Node.js (v14 ou superior)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- npm (geralmente instalado junto com o Node.js)
 
-## Running unit tests
+- Angular CLI (recomendado, pode ser instalado com npm install -g @angular/cli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 🧰 Etapas
 
-## Running end-to-end tests
+1. **Clone o repositório:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/Samuel-Kennedy/front-end-viceri.git
+   cd front-end-viceri
 
-## Further help
+2. **Instale as dependências:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- npm install
+
+3. **Inicie a aplicação:**
+
+- ng serve
+
+4. **🤝 Contato**
+
+Em caso de dúvidas, sugestões ou problemas, abra uma issue no repositório do GitHub ou envie um e-mail para: samuel.gomes@aol.com
+
+5. **📜 Licença**
+
+Este projeto está licenciado sob a licença MIT.
+
+6. **E se você precisar disponibilizar essa aplicação na AWS? Descreva brevemente como o faria.** 
+
+Para disponibilizar essa aplicação na AWS, como o projeto é composto por dois lados — o backend em Node.js/Express e o frontend em Angular — a ideia é subir ambos para a AWS, garantindo que eles continuem se comunicando normalmente.
+
+Backend (Node.js/Express)
+Eu usaria o AWS Elastic Beanstalk para hospedar o backend. Ele facilita bastante o deploy de aplicações Node.js. Subo a API por lá e configuro as variáveis de ambiente (como a chave JWT e o banco de dados).
+Se estiver usando SQLite para testes, trocaria por PostgreSQL ou MySQL em produção, usando o Amazon RDS.
+
+Frontend (Angular)
+O Angular gera arquivos estáticos com o comando ng build. Esses arquivos eu colocaria num bucket do Amazon S3 com hospedagem estática ativada. Dá pra apontar um domínio personalizado, ativar HTTPS com o AWS Certificate Manager e, se quiser performance e segurança extra, usar o Amazon CloudFront como CDN.
+
+Integração entre os dois
+No código do Angular, o frontend faz requisições para a API do backend. Então, depois que o backend estiver publicado, eu só ajustaria a URL base da API no frontend (geralmente no environment.prod.ts) para apontar para o endereço do Elastic Beanstalk.
+
+Com isso, os dois continuam se comunicando normalmente, só que agora em produção. Essa estrutura funciona bem, é escalável e fácil de manter.
+

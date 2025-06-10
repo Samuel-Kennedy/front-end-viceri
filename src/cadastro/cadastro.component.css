@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -83,4 +84,44 @@ button:hover {
 
 .cadastro a:hover {
   text-decoration: underline;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  margin-bottom: 4px;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 0.3rem;
+}
+
+button {
+  background-color: #5e60ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:enabled {
+  background-color: #3f409c;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
 }

@@ -37,12 +37,12 @@ export class CadastroComponent implements OnInit {
         next: (res) => {
           console.log('Cadastro realizado com sucesso:', res);
           alert("Cadastrado com sucesso!");
-          this.router.navigate(['/login']); // redireciona após cadastro
+          this.router.navigate(['/login']);
         },
         error: (err) => {
           console.error('Erro ao cadastrar:', err);
 
-          if (err.status === 400) {  // Exemplo: conflito por email já existente
+          if (err.status === 400) {
             alert("Este email já está cadastrado. Por favor, use outro email.");
           } else {
             alert("Erro ao cadastrar. Tente novamente mais tarde.");
@@ -51,7 +51,6 @@ export class CadastroComponent implements OnInit {
       });
     }
   }
-
 
   voltarLogin() {
     this.router.navigate(['/login']);
