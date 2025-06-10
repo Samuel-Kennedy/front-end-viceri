@@ -1,0 +1,32 @@
+<div class="tela-tarefas">
+  <header class="header-global">
+    <span class="usuario-nome">Seja bem-vindo(a)!</span>
+    <button class="btn-sair" (click)="logout()">Sair</button>
+  </header>
+
+  <div class="container">
+    <h2>Suas Tarefas</h2>
+
+    <ul class="lista-cabecalho">
+      <li class="col descricao">Descrição</li>
+      <li class="col prioridade priop">Prioridade</li>
+      <li class="col acao">Ação</li>
+    </ul>
+
+    <ul class="lista-tarefas">
+      <li *ngFor="let tarefa of tarefas" [class.concluida]="tarefa.concluida" class="linha-tarefa">
+        <span class="col descricao">{{ tarefa.descricao }}</span>
+        <span class="col prioridade">{{ tarefa.prioridade }}</span>
+
+        <button 
+          *ngIf="!tarefa.concluida" 
+          (click)="concluirTarefa(tarefa.id)"
+          class="acao btn-concluir">
+          Concluir
+        </button>
+
+        <span *ngIf="tarefa.concluida" class="col acao">✔️ Concluída</span>
+      </li>
+    </ul>
+  </div>
+</div>

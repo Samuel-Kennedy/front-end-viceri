@@ -1,0 +1,154 @@
+/* Reset básico e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Tela inteira e fundo gradiente */
+.tela-tarefas {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #1d3557, #5e60ce);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header-global {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 10;
+}
+
+.usuario-nome {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-sair {
+  background-color: #e63946;
+  padding: 8px 14px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-sair:hover {
+  background-color: #b82c37;
+}
+
+/* Container das tarefas */
+.container {
+  background-color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+h2 {
+  color: #5e60ce;
+  margin-bottom: 1.5rem;
+  font-size: 26px;
+}
+
+/* LISTAS - RESET */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cabeçalho: display flex, borda inferior roxa */
+.lista-cabecalho {
+  display: flex;
+  border-bottom: 2px solid #5e60ce;
+  font-weight: 700;
+  color: #5e60ce;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+/* Linhas das tarefas - display flex para alinhar as colunas */
+.lista-tarefas .linha-tarefa {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.linha-tarefa.concluida {
+  background-color: #d3f9d8;
+  color: #2d6a4f;
+  text-decoration: line-through;
+}
+
+/* COLUNAS com larguras fixas relativas */
+
+/* Descrição: ocupa maior parte */
+.col.descricao {
+  word-break: break-word;
+}
+
+/* Prioridade: largura menor */
+.col.prioridade {
+  color: #5e60ce;
+}
+
+.priop {
+  padding-left: 3.5rem;
+}
+
+/* Ação: botão ou texto com largura fixa */
+.col.acao {
+  padding-right: 42px;
+}
+
+/* Botão concluir */
+.btn-concluir {
+  background-color: #5e60ce;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-concluir:hover {
+  background-color: #3f409c;
+}

@@ -1,0 +1,19 @@
+<div class="tela-login">
+    <div class="container-login">
+        <h1 class="titulo-viceri">Viceri-SEIDOR</h1>
+
+        <div class="formulario">
+            <h2>Cadastro</h2>
+            <form [formGroup]="formCadastro" (ngSubmit)="onRegister()">
+                <input type="text" formControlName="nome" placeholder="Nome" />
+                <input type="email" formControlName="email" placeholder="Email" />
+                <input type="password" formControlName="senha" placeholder="Senha" />
+
+                <button type="submit" [disabled]="formCadastro.invalid">Registrar</button>
+            </form>
+            <div class="cadastro">
+                Já tem uma conta? <a (click)="voltarLogin()">Faça login</a>
+            </div>
+        </div>
+    </div>
+</div>
